@@ -6,16 +6,11 @@ $ docker pull docker.elastic.co/elasticsearch/elasticsearch:5.6.5
 $ docker run --name elastic -d -p 9200:9200 -p 9300:9300 -e "http.host=0.0.0.0" -e "transport.host=127.0.0.1" -e "xpack.security.enabled=false" docker.elastic.co/elasticsearch/elasticsearch:5.6.5
 ```
 
- *Application has 2 API endpoints:*
-| Endpoint | Description |
-| ------ | ------ |
-| /Home/PerRequest | *ConnectionSettings* instance is instantiated by per request |
-| /Home/Singleton | *ConnectionSettings* instance is instantiated as singleton |
-
 ## Test Results (50 requests)
 
-|/Home/Singleton | /Home/PerRequest |
+| /Home/Singleton | /Home/PerRequest |
 | ------ | ------ |
+|*ConnectionSettings* instance is instantiated by per request | *ConnectionSettings* instance is instantiated as singleton |
  | 568 ms | 328 ms | 
  | 37 ms | 427 ms | 
  | 64 ms | 371 ms | 
