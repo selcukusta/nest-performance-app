@@ -10,7 +10,7 @@ $ docker run --name elastic -d -p 9200:9200 -p 9300:9300 -e "http.host=0.0.0.0" 
 
 | /Home/Singleton | /Home/PerRequest |
 | ------ | ------ |
-|*ConnectionSettings* instance is instantiated by per request | *ConnectionSettings* instance is instantiated as singleton |
+| *ConnectionSettings* instance is instantiated as singleton | *ConnectionSettings* instance is instantiated by per request |
  | 568 ms | 328 ms | 
  | 37 ms | 427 ms | 
  | 64 ms | 371 ms | 
