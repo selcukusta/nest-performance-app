@@ -1,4 +1,4 @@
-# [Elasticsearch.Net & NEST](https://github.com/elastic/elasticsearch-net) performance is basic analyzed with this project. 
+# Simple performance analysis on [Elasticsearch.Net & NEST](https://github.com/elastic/elasticsearch-net) package. 
 
 Docker can be used to work on the application with these commands:
 ```sh
